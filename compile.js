@@ -30,7 +30,7 @@ const input = {
   };
   const output = JSON.parse(solc.compile(JSON.stringify(input)));
   // `output` here contains the JSON output as specified in the documentation
-  var outputContracts = output.contracts['inbox.sol']['inbox']
+  var outputContracts = output.contracts['inbox.sol']['Inbox']
 
   // exports ABI interface
   module.exports.abi = outputContracts.abi;

@@ -1,13 +1,13 @@
 //SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.11; 
 
-contract inbox{
+contract Inbox{
     string public message;
 
-    function Inbox(string memory initialMessage) public {
+    constructor (string memory initialMessage) {
         message = initialMessage;
     }
-    function setMessage(string memory newMessage) public {
+    function setMessage(string calldata newMessage) public {
         message = newMessage;
     }
     
