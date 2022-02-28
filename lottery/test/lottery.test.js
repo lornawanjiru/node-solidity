@@ -53,7 +53,18 @@ describe('Lottery', ()=> {
     assert.equal(accounts[1], players[1]);
     assert.equal(accounts[2], players[2]);
     assert.equal(3,players.length)
-    
-})
+    })
+    it('only manager can call pickWinner', async () =>{
+        try{
+            await lottery.methods.pickWinner().send({
+              from: accounts[1]  
+            });
+            assert(false);
+        }
+        catch(err){
+            assert(err);
+        }
+    })
+
   
 })
