@@ -65,6 +65,7 @@ describe('Lottery', ()=> {
             assert(err);
         }
     })
+    
 
   
 })
